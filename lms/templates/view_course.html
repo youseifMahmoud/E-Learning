@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Course Details{% endblock %}
+{% block content %}
+<div class="container-a" style="margin-left: 130px;">
+    <br>
+    <h4>Teacher: {{ course.created_by.user.username }}</h4>
+    <h1 style="color: rgb(84, 0, 163);">- {{ course.title }}</h1>
+    <br>
+    <hr>
+    <h6 > {{ course.description }}</h6>
+
+    <div class="mt-4">
+        <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}
